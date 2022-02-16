@@ -47,29 +47,33 @@
                             <input id="clothes-input" class="col-span-2 mr-16 bg-gray-300 rounded" type="text">
                         </div>
                         <div class="inline-block m-auto">
-                            <button
+                            <button onclick="calculation()"
                                 class="p-2 pl-12 pr-12 bg-sky-600 rounded text-white text-xl font-bold">Calculate</button>
                         </div>
                         <div>
-                            <h2 class="text-2xl font-bold text-center m-1 mt-4">Total Expenses: <span>00</span></h2>
+                            <h2 class="text-2xl font-bold text-center m-1 mt-4">Total Expenses: <span
+                                    id="cost">00</span></h2>
                         </div>
                         <div>
-                            <h2 class="text-2xl font-bold text-center m-1 mb-4">Balance: <span>00</span></h2>
+                            <h2 class="text-2xl font-bold text-center m-1 mb-4">Balance: <span id="total-cost">00</span>
+                            </h2>
                         </div>
                         <div>
                             <div class="grid grid-cols-6 sm:grid-cols-10 gap-3 content-center">
-                                <p class="text-xl inline-block text-right col-span-2">Clothes :</p>
-                                <input id="clothes-input" class="col-span-3 bg-gray-300 rounded" type="text">
+                                <p class="text-xl inline-block text-right col-span-2">Save :</p>
+                                <input id="saving-input" class="col-span-3 bg-gray-300 rounded" type="text">
                                 <p class="text-xl inline-block text-center">%</p>
-                                <button
+                                <button onclick="saving()"
                                     class="p-1 pl-12 pr-12 bg-sky-600 rounded text-white text-xl font-bold col-start-2 sm:col-start-7 col-span-4">Save</button>
                             </div>
                         </div>
                         <div>
-                            <h2 class="text-2xl font-bold text-center m-1 mt-4">Saving Amount: <span>00</span></h2>
+                            <h2 class="text-2xl font-bold text-center m-1 mt-4">Saving Amount: <span
+                                    id="saving-amount">00</span></h2>
                         </div>
                         <div>
-                            <h2 class="text-2xl font-bold text-center m-1">Remaining Balance: <span>00</span></h2>
+                            <h2 class="text-2xl font-bold text-center m-1">Remaining Balance: <span
+                                    id="remaining-balance">00</span></h2>
                         </div>
                     </div>
                 </div>
