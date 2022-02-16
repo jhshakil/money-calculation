@@ -5,15 +5,20 @@ function cost() {
     const costCalculate = parseInt(foodInput.value) + parseInt(rentInput.value) + parseInt(clothesInput.value);
     return costCalculate;
 }
+function income() {
+    const incomeInput = document.getElementById('income-input');
+    const costSubTotal = cost();
+    const balanceCheck = parseInt(incomeInput.value) - costSubTotal;
+    return balanceCheck;
+}
 
 function calculation() {
-    const incomeInput = document.getElementById('income-input');
     const costing = document.getElementById('cost');
     const totalCosting = document.getElementById('total-cost');
     const costSubTotal = cost();
     costing.innerText = costSubTotal;
-    const balanceCheck = parseInt(incomeInput.value) - costSubTotal;
-    totalCosting.innerText = balanceCheck;
+    const balance = income();
+    totalCosting.innerText = balance;
 }
 
 function saving() {
@@ -29,6 +34,6 @@ function saving() {
     const costSubTotal = cost();
     const costing = document.getElementById('cost');
     const totalCosting = document.getElementById('total-cost');
-    const checkBalance = parseInt(incomeInput.value) - costSubTotal - savingBalence;
+    const checkBalance = income() - savingBalence;
     remainingBalance.innerText = checkBalance;
 }
