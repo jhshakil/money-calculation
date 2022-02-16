@@ -13,8 +13,69 @@
 </head>
 
 <body>
-    <header></header>
-    <main></main>
+    <header>
+        <h1 class="text-5xl text-orange-400 font-bold text-center m-8">Money Calculation</h1>
+    </header>
+    <main>
+        <section class="m-1 sm:m-16">
+            <div class="grid grid-cols-1 gap-20 sm:grid-cols-2">
+                <div>
+                    <img class="w-100" src="images/picture.jpg" alt="">
+                </div>
+                <div class="bg-gray-200">
+                    <div class="w-4/5 sm:w-3/4 m-auto grid grid-rows-12 gap-4 mt-14">
+                        <div>
+                            <h2 class="text-2xl font-bold text-center m-4">income</h2>
+                        </div>
+                        <div class="grid grid-cols-3 gap-4">
+                            <p class="text-xl inline-block text-right">Income :</p>
+                            <input id="income-input" class="col-span-2 mr-16" type="text">
+                        </div>
+                        <div>
+                            <h2 class="text-2xl font-bold text-center m-4">Expenses</h2>
+                        </div>
+                        <div class="grid grid-cols-3 gap-4">
+                            <p class="text-xl inline-block text-right">Food :</p>
+                            <input id="food-input" class="col-span-2 mr-16" type="text">
+                        </div>
+                        <div class="grid grid-cols-3 gap-4">
+                            <p class="text-xl inline-block text-right">Rent :</p>
+                            <input id="rent-input" class="col-span-2 mr-16" type="text">
+                        </div>
+                        <div class="grid grid-cols-3 gap-4">
+                            <p class="text-xl inline-block text-right">Clothes :</p>
+                            <input id="clothes-input" class="col-span-2 mr-16" type="text">
+                        </div>
+                        <div class="inline-block m-auto">
+                            <button
+                                class="p-2 pl-12 pr-12 bg-sky-600 rounded text-white text-xl font-bold">Calculate</button>
+                        </div>
+                        <div>
+                            <h2 class="text-2xl font-bold text-center m-1 mt-4">Total Expenses: <span>00</span></h2>
+                        </div>
+                        <div>
+                            <h2 class="text-2xl font-bold text-center m-1 mb-4">Balance: <span>00</span></h2>
+                        </div>
+                        <div>
+                            <div class="grid grid-cols-6 sm:grid-cols-10 gap-3 content-center">
+                                <p class="text-xl inline-block text-right col-span-2">Clothes :</p>
+                                <input id="clothes-input" class="col-span-3" type="text">
+                                <p class="text-xl inline-block text-center">%</p>
+                                <button
+                                    class="p-1 pl-12 pr-12 bg-sky-600 rounded text-white text-xl font-bold col-start-2 sm:col-start-7 col-span-4">Save</button>
+                            </div>
+                        </div>
+                        <div>
+                            <h2 class="text-2xl font-bold text-center m-1 mt-4">Saving Amount: <span>00</span></h2>
+                        </div>
+                        <div>
+                            <h2 class="text-2xl font-bold text-center m-1">Remaining Balance: <span>00</span></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
     <script src="js/app.js"></script>
 </body>
 
