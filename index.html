@@ -8,22 +8,24 @@
     <title>Money Calculation</title>
     <!-- Tailwind css  -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Custom css -->
-    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+    <!-- header section  -->
     <header>
         <h1 class="text-5xl text-orange-400 font-bold text-center m-8">Money Calculation</h1>
     </header>
+    <!-- main section  -->
     <main>
         <section class="m-1 sm:m-16">
             <div class="grid grid-cols-1 gap-20 sm:grid-cols-2">
+                <!-- image section  -->
                 <div>
                     <img class="w-100" src="images/picture.jpg" alt="">
                 </div>
                 <div class="bg-gray-100">
                     <div class="w-4/5 sm:w-3/4 m-auto grid grid-rows-12 gap-4 mt-14">
+                        <!-- income  -->
                         <div>
                             <h2 class="text-2xl font-bold text-center m-4">income</h2>
                         </div>
@@ -32,6 +34,7 @@
                             <input id="income-input" class="col-span-2 mr-16 bg-gray-300 rounded p-2" type="text">
                         </div>
                         <div>
+                            <!-- costing  -->
                             <h2 class="text-2xl font-bold text-center m-4">Expenses</h2>
                         </div>
                         <div class="grid grid-cols-3 gap-4">
@@ -46,6 +49,7 @@
                             <p class="text-xl inline-block text-right">Clothes :</p>
                             <input id="clothes-input" class="col-span-2 mr-16 bg-gray-300  p-2" type="text">
                         </div>
+                        <!-- calculation  -->
                         <div class="inline-block m-auto">
                             <button onclick="calculation()"
                                 class="p-2 pl-12 pr-12 bg-sky-600 rounded text-white text-xl font-bold">Calculate</button>
@@ -58,6 +62,7 @@
                             <h2 class="text-2xl font-bold text-center m-1 mb-4">Balance: <span id="total-cost">00</span>
                             </h2>
                         </div>
+                        <!-- saving section  -->
                         <div>
                             <div class="grid grid-cols-6 sm:grid-cols-10 gap-3 content-center">
                                 <p class="text-xl inline-block text-right col-span-2">Save :</p>
@@ -67,10 +72,12 @@
                                     class="p-1 pl-12 pr-12 bg-sky-600 rounded text-white text-xl font-bold col-start-2 sm:col-start-7 col-span-4">Save</button>
                             </div>
                         </div>
+                        <!-- saving calculation  -->
                         <div>
                             <h2 class="text-2xl font-bold text-center m-1 mt-4">Saving Amount: <span
                                     id="saving-amount">00</span></h2>
                         </div>
+                        <!-- full calculation  -->
                         <div>
                             <h2 class="text-2xl font-bold text-center m-1">Remaining Balance: <span
                                     id="remaining-balance">00</span></h2>

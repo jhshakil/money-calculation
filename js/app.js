@@ -1,3 +1,5 @@
+// input value 
+
 function input(names) {
     let inputValue = document.getElementById(names + '-input').value;
     if (inputValue != '') {
@@ -6,6 +8,7 @@ function input(names) {
         return inputValue = '0';
     }
 }
+// costing 
 
 function cost() {
     const foodInput = parseInt(input('food'));
@@ -22,6 +25,7 @@ function cost() {
         return alert('Please enter a valid number');
     }
 }
+// calculation costing and balance
 
 function calculation() {
     const incomeInput = input('income');
@@ -51,6 +55,7 @@ function calculation() {
         totalCosting.innerText = totalCostingInner;
     }
 }
+// calculation for saving
 
 function saving() {
     const incomeInput = parseInt(input('income'));
@@ -59,18 +64,23 @@ function saving() {
         return alert('Please enter a valid number');
     }
     const savingAmount = document.getElementById('saving-amount');
-    const persent = savingInput / 100;
-    const savingBalence = parseInt(incomeInput) * persent;
-    savingAmount.innerText = savingBalence;
-
-    // remaining balance 
-    const remainingBalance = document.getElementById('remaining-balance');
-    const costSubTotal = cost();
-    const balance = incomeInput - costSubTotal;
-    if (savingBalence > balance) {
-        return alert('You do not have much money')
+    const savingInner = savingAmount.innerText;
+    if (isNaN(incomeInput)) {
+        savingAmount.innerText = savingInner;
     } else {
-        const checkBalance = balance - savingBalence;
-        remainingBalance.innerText = checkBalance;
+        const persent = savingInput / 100;
+        const savingBalence = incomeInput * persent;
+        savingAmount.innerText = savingBalence;
+        // remaining balance calculation 
+
+        const remainingBalance = document.getElementById('remaining-balance');
+        const costSubTotal = cost();
+        const balance = incomeInput - costSubTotal;
+        if (savingBalence > balance) {
+            return alert('You do not have much money')
+        } else {
+            const checkBalance = balance - savingBalence;
+            remainingBalance.innerText = checkBalance;
+        }
     }
 }
