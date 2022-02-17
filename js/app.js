@@ -60,6 +60,9 @@ function calculation() {
 function saving() {
     const incomeInput = parseInt(input('income'));
     const savingInput = parseInt(input('saving'));
+    if (savingInput < 0) {
+        return alert('Please enter a valid number');
+    }
     if (isNaN(savingInput)) {
         return alert('Please enter a valid number');
     }
